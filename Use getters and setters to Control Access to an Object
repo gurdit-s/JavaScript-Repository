@@ -1,0 +1,21 @@
+// Only change code below this line
+class Thermostat {
+  tempratureF;
+  constructor(temprature){
+    this.tempratureF = temprature
+  }
+  get temperature(){
+    var tempC = 5/9 * (this.tempratureF - 32)
+    return tempC
+  }
+  set temperature(tempC) {
+    this.tempratureF = tempC * 9.0 / 5 + 32
+  }
+}
+
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
